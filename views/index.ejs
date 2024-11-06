@@ -1,24 +1,53 @@
+
 <html>
-    <head>
-    <style>
-        table, td, th {
-            border: 1px solid orange;
-        }
-    </style>
-    </head>
-    <body>
-    Here are the Concert locations and featured donuts: <br /><br />
-    <table>
-        <thead>
-            <th>Concert Location</th>
-            <th>Featured Donut</th>
-        </thead>
-        <% for (let iCount=0; iCount < aConcerts.length; iCount++) { %>
-        <tr>
-            <td><%= aConcerts[iCount].location %></td>
-            <td><%= aConcerts[iCount].featured_donut %></td>
-        </tr>
-        <% } %>
-    </table>
-    </body>
+<head>
+  <title>Top 10 Netflix Movies</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid orange;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: orange;
+      color: white;
+    }
+    h1 {
+      color: orange;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Top 10 Movies on Netflix</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Genres</th>
+        <th>Release Year</th>
+        <th>IMDb Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (let i = 0; i < movies.length; i++) { %>
+      <tr>
+        <td><%= movies[i].title %></td>
+        <td><%= movies[i].genres %></td>
+        <td><%= movies[i].releaseYear %></td>
+        <td><%= movies[i].imdbAverageRating %></td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</body>
 </html>
+
