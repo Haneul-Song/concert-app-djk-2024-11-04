@@ -1,7 +1,7 @@
 let express = require("express");
 let app = express();
 app.set("view engine", "ejs");
-
+// this time it will work 
 // set up database connection
 const knex = require("knex")({
   client: "mysql",
